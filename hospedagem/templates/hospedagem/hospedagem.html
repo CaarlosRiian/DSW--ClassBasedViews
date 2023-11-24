@@ -1,24 +1,32 @@
 {% extends 'base.html' %}
 
 {% block center %}
-  <h2> Lista de Alunos</h2>
+  <h2> Lista de Hospedagens</h2>
 
   
     
   <form method="get">
    
     <div class="mb-3">
-        <label for="nome" class="form-label">Nome</label>
+        <label for="nome" class="form-label">Data de Entrada</label>
         {{ form.data_entrada }}
     </div>
    
     <div class="row">
       <div class="col-md-6 mb-3">
-          <label for="data_saida" class="form-label">Cidade</label>
+          <label for="data_saida" class="form-label">Data de Saida</label>
           {{ form.data_saida }}
       </div>
       <div class="col-md-6 mb-3">
-          <label for="valor" class="form-label">Curso</label>
+        <label for="data_saida" class="form-label">Valor</label>
+        {{ form.valor }}
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="data_saida" class="form-label">Cliente</label>
+      {{ form.cliente }}
+  </div>
+      <div class="col-md-6 mb-3">
+          <label for="valor" class="form-label">Quarto</label>
           {{ form.quarto }}
       </div>
   </div>
@@ -54,6 +62,7 @@
         <td>{{ hospedagem.quarto }}</td>
         <td>
           <a href="{% url 'hospedagem_editar' id=hospedagem.id %}" class="btn btn-primary btn-sm">Editar</a>
+          <a href="{% url 'hospedagem_detalhe' id=hospedagem.id %}" class="btn btn-info btn-sm">Detalhe</a>
           <a href="{% url 'hospedagem_remover' id=hospedagem.id %}" class="btn btn-danger btn-sm">Remover</a>
         </td>
       </tr>

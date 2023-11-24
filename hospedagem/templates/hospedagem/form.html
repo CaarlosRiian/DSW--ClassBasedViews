@@ -6,28 +6,28 @@
     <form method="post">
         {% csrf_token %}
         <div class="mb-3">
-            <label for="nome" class="form-label">Nome</label>
+            <label for="nome" class="form-label">Data de Entrada</label>
             {{ form.data_entrada }}
         </div>
         
         <div class="mb-3">
-            <label for="nome" class="form-label">E-mail</label>
+            <label for="nome" class="form-label">Data de Saida</label>
             {{ form.data_saida }}
         </div>
 
         <div class="mb-3">
-            <label for="nome" class="form-label">Endereço</label>
+            <label for="nome" class="form-label">Valor</label>
             {{ form.valor }}
         </div>
         
 
         <div class="mb-3">
-            <label for="nome" class="form-label">Cidade</label>
+            <label for="nome" class="form-label">Cliente</label>
             {{ form.cliente }}
         </div>
 
         <div class="mb-3">
-            <label for="nome" class="form-label">Curso</label>
+            <label for="nome" class="form-label">Quarto</label>
             {{ form.quarto }}
         </div>
 

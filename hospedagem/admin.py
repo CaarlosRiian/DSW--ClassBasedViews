@@ -1,23 +1,8 @@
 from django.contrib import admin
-from .views import HospedagemCriar, HospedagemDetalhe, HospedagemEditar, HospedagemRemover, HospedagemListar
+from .models import Cliente, Quarto, Hospedagem, Consumo
 
-@admin.register(HospedagemCriar)
-class HospedagemAdmin(admin.ModelAdmin):
-    list_display=('','endereco','email')
-
-@admin.register(HospedagemDetalhe)
-class HospedagemAdmin(admin.ModelAdmin):
-    list_display=('nome',)
-
-@admin.register(HospedagemEditar)
-class HospedagemAdmin(admin.ModelAdmin):
-    list_display=('nome','sigla_estado',)
-
-@admin.register(HospedagemRemover)
-class HospedagemAdmin(admin.ModelAdmin):
-    list_display=('nome','sigla_estado',)
-
-@admin.register(HospedagemListar)
-class HospedagemAdmin(admin.ModelAdmin):
-    list_display=('nome','sigla_estado',)
+admin.site.register(Cliente)
+admin.site.register(Quarto)
+admin.site.register(Hospedagem)
+admin.site.register(Consumo)
 

@@ -29,7 +29,7 @@ class HospedagemRemover(DeleteView):
     
 class HospedagemListar(ListView):
     model = Hospedagem
-    template_name = 'hospedagem/hospedagens.html'
+    template_name = 'hospedagem/hospedagem.html'
     context_object_name = 'hospedagens'  # Nome da variável a ser usada no template
     paginate_by = 2
 
@@ -52,7 +52,8 @@ class HospedagemListar(ListView):
 
 class HospedagemDetalhe(DetailView):
     model = Hospedagem
-    
+    template_name = 'hospedagem/detail.html'
+    pk_url_kwarg = 'id'
 
 class IndexView(TemplateView):
     template_name = "hospedagem/index.html"
